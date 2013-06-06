@@ -2,7 +2,9 @@ Disclaimer
 ---
 *AutoMin for Statamic is an adaptation of Jesse Bunch's [AutoMin add-on for ExpressionEngine](https://github.com/bunchjesse/AutoMin). The statamic version wouldn't be possible without Jesse's fantastic work, and it is being published with his approval.*
   
-*The main changes from the ExxpressionEngine version is that the settings are moved to a yaml file. Also, HTML compression is not possible, logging is disabled and the way tag parameters worked had to be changed.*
+*The main changes from the ExpressionEngine version is that the settings are moved to a yaml file. Also, HTML compression is not possible, logging is disabled and the way tag parameters worked had to be changed.*
+
+*Apart from that, I hope that I've managed to not mess up Jesse's original code too much, and that it still works as intended. I'm no Statamic pr0, so feel free to school me if I've done something awkward. ;)*
 
 
 Introduction
@@ -18,6 +20,7 @@ https://github.com/aelvan/AutoMin-Statamic/issues
 
 Please note: I work on AutoMin in my spare time so I may not be able to address your issues right away. This is why AutoMin is free. The code is well organized and documented so feel free to poke around the and submit pull requests for any improvements you make.
 
+
 Special Thanks
 ---
 Thanks to the minify project for their CSS compressor and the JSMin project for their JavaScript minifiaction class. Also, thanks goes to leafo for the PHP LESS processor. 
@@ -25,6 +28,7 @@ Thanks to the minify project for their CSS compressor and the JSMin project for 
  - Minify: http://code.google.com/p/minify/
  - JSMin: http://www.crockford.com/javascript/jsmin.html
  - LESS for PHP: http://leafo.net/lessphp/
+
 
 Changelog
 ---
@@ -34,11 +38,12 @@ Changelog
 
 Installation (Statamix 1.4.x)
 ---
-1. Download and extract the contents of the zip. Copy the _add-ons/automin folder to your Statamic add-ons folder, and _config/automin.yaml til your config folder. 
+1. Download and extract the contents of the zip. Copy the _add-ons/automin folder to your Statamic add-ons folder, and _config/automin.yaml to your config folder. 
 2. Create the AutoMin cache directory somewhere below your document root, preferably in your theme folder. Make sure it is writable by Apache (most of the time this means giving the folder 777 permissions).
 3. Edit the automin.yaml file to reflect your current paths.
 4. Add the AutoMin template tags to your Statamic templates. 
 5. Refresh your site. If all goes well, you'll see your CSS and JS code combined and compressed. Note: the first page load after changing your source files or the AutoMin template tags could take longer than usual while your code is compressed.
+
 
 Example Usage
 ---
@@ -113,3 +118,14 @@ Make sure your cache directory is set in the module's settings and that the dire
 If AutoMin breaks your CSS or JS code, make sure that your code contains no syntax errors. In your JS, you need to make sure that you always terminate JS statements with a semi-colon. Try running your source code through the relevant lint program for a validity check.
 
 Make sure that your CSS images are web-root relative. Use URLs like: `url('/css/img/myimage.jpg')` instead of `url('img/myimage.jpg')`
+
+
+"Save some CPU cycles and precompile it instead!"
+---
+(I know this will come up)
+
+NO! Precompiling is the mother of all f-ups. Or, not really... But. I don't have the need for a build tool except for compiling LESS, minification and combining of JS and CSS. Using an add-on like this, I don't need it at all. 
+
+Also, this removes all sources for mistakes and/or misunderstandigs regarding where the source code resides, since the same files will be in all environments. We're a tiny shop, and this comes in handy when handing off projects to other developers and/or clients, who doesn't necessarily use git.
+         
+But of course... Feel free to precompile all you want! ;)         
