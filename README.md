@@ -44,36 +44,36 @@ Example Usage
 
 ####JavaScript
 
-  {{ automin type="js" }}`  
-    <script src="/{{ theme_path }}js/jquery,js"></script>`
-    <script src="/{{ theme_path }}js/jquery.ui.js"></script>`
-    <script src="/{{ theme_path }}js/jquery.ui.mouse.js"></script>`
-    <script src="/{{ theme_path }}js/jquery.ui.position.js"></script>`
-    <script src="/{{ theme_path }}js/jquery.ui.widget.js"></script>`
-    <script src="/{{ theme_path }}js/jquery.ui.draggable.js"></script>`
-    <script src="/{{ theme_path }}js/gsap/plugins/CSSPlugin.min.js"></script>`
-    <script src="/{{ theme_path }}js/gsap/easing/EasePack.min.js"></script>`
-    <script src="/{{ theme_path }}js/gsap/TweenLite.min.js"></script>`
-    <script src="/{{ theme_path }}js/main.js"></script>`
-  {{ /automin }}`  
+    {{ automin type="js" }}
+        <script src="/{{ theme_path }}js/jquery,js"></script>
+        <script src="/{{ theme_path }}js/jquery.ui.js"></script>
+        <script src="/{{ theme_path }}js/jquery.ui.mouse.js"></script>
+        <script src="/{{ theme_path }}js/jquery.ui.position.js"></script>
+        <script src="/{{ theme_path }}js/jquery.ui.widget.js"></script>
+        <script src="/{{ theme_path }}js/jquery.ui.draggable.js"></script>
+        <script src="/{{ theme_path }}js/gsap/plugins/CSSPlugin.min.js"></script>
+        <script src="/{{ theme_path }}js/gsap/easing/EasePack.min.js"></script>
+        <script src="/{{ theme_path }}js/gsap/TweenLite.min.js"></script>
+        <script src="/{{ theme_path }}js/main.js"></script>
+    {{ /automin }}
 
 ####CSS
 
-  {{ automin type="css" attr="rel='stylesheet'" }}`
-    <link rel="stylesheet" href="/{{ theme_path }}css/normalize.css" />`
-    <link rel="stylesheet" href="/{{ theme_path }}css/core.css" />`
-    <link rel="stylesheet" href="/{{ theme_path }}css/main.css" />`
-  {{ /automin }}`
+    {{ automin type="css" attr="rel='stylesheet'" }}
+        <link rel="stylesheet" href="/{{ theme_path }}css/normalize.css" />
+        <link rel="stylesheet" href="/{{ theme_path }}css/core.css" />
+        <link rel="stylesheet" href="/{{ theme_path }}css/main.css" />
+    {{ /automin }}
 
 
 ####LESS
 
-  {{ automin type="less" attr="rel='stylesheet' title='default'" }}`  
-    <link rel="stylesheet" href="/{{ theme_path }}css/elements.less" />`
-    <link rel="stylesheet" href="/{{ theme_path }}css/normalize.less" />`
-    <link rel="stylesheet" href="/{{ theme_path }}css/core.less" />`
-    <link rel="stylesheet" href="/{{ theme_path }}css/main.less" />`
-  {{ /automin }}`
+    {{ automin type="less" attr="rel='stylesheet' title='default'" }}  
+        <link rel="stylesheet" href="/{{ theme_path }}css/elements.less" />
+        <link rel="stylesheet" href="/{{ theme_path }}css/normalize.less" />
+        <link rel="stylesheet" href="/{{ theme_path }}css/core.less" />
+        <link rel="stylesheet" href="/{{ theme_path }}css/main.less" />
+    {{ /automin }}
 
 
 Currently, you may not combine LESS code with normal CSS code. Use two separate AutoMin tags to compile both CSS and LESS.
@@ -85,19 +85,19 @@ You can specify tag attributes using the attr parameter on the automin tag. For 
 
 This tag:
 
-  {{ automin type="js" attr="type='text/javascript'" }}`
+    {{ automin type="js" attr="type='text/javascript'" }}
 
 Outputs something similar to:
 
-	<script src="/_themes/theme/automin/7dc66e1b2104b40a9992a3652583f509.js?modified=8832678882928" type="text/javascript"></script>
+    <script src="/_themes/theme/automin/7dc66e1b2104b40a9992a3652583f509.js?modified=8832678882928" type="text/javascript"></script>
 
 And this tag:
 
-  {{ automin type="css" attr="rel='stylesheet' title='default' media='screen, projection'" }}`  
+    {{ automin type="css" attr="rel='stylesheet' title='default' media='screen, projection'" }}  
 
 Outputs something similar to:
 
-	<link href="/_themes/theme/automin/55ed34446f3eac6f869f3fe5b375d311.css?modified=8832678882928" type="text/css" title="default" rel="stylesheet" media="screen, projection">
+    <link href="/_themes/theme/automin/55ed34446f3eac6f869f3fe5b375d311.css?modified=8832678882928" type="text/css" title="default" rel="stylesheet" media="screen, projection">
 
 
 Compiling LESS
