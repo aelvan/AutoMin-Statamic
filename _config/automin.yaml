@@ -1,0 +1,20 @@
+#########################################################################
+#
+# Settings
+#
+#########################################################################
+
+# Turn automin on/off (yes/no) 
+enabled: yes
+
+# Turn caching on/off (yes/no) 
+caching_enabled: yes
+
+# path to cache folder, relative to site root
+cache_path: _themes/theme/cache
+
+# url to cache folder, absolute or relative
+cache_url: /_themes/theme/cache
+
+
+
