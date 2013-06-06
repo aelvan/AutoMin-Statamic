@@ -13,7 +13,8 @@ AutoMin for Statamic is an Statamic add-on that automates the combination and co
 
 AutoMin is smart enough to know when you've changed your source files and will automatically regenerate it's cache when appropriate.
 
-For support, please file a bug report or feature request at the repository on Github: https://github.com/aelvan/AutoMin-Statamic/issues
+For support, please file a bug report or feature request at the repository on Github:    
+https://github.com/aelvan/AutoMin-Statamic/issues
 
 Please note: I work on AutoMin in my spare time so I may not be able to address your issues right away. This is why AutoMin is free. The code is well organized and documented so feel free to poke around the and submit pull requests for any improvements you make.
 
@@ -31,7 +32,7 @@ Changelog
  - Initial Release
 
 
-Installation (EE 2.X)
+Installation (Statamix 1.4.x)
 ---
 1. Download and extract the contents of the zip. Copy the _add-ons/automin folder to your Statamic add-ons folder, and _config/automin.yaml til your config folder. 
 2. Create the AutoMin cache directory somewhere below your document root, preferably in your theme folder. Make sure it is writable by Apache (most of the time this means giving the folder 777 permissions).
