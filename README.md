@@ -1,6 +1,6 @@
 Disclaimer
 ---
-*AutoMin for Statamic is an adaptation of Jesse Bunch's [AutoMin add-on for ExpressionEngine](https://github.com/bunchjesse/AutoMin). The statamic version wouldn't be possible without Jesse's fantastic work, and it is being published with his approval.*
+*AutoMin for Statamic is a port of Jesse Bunch's [AutoMin add-on for ExpressionEngine](https://github.com/bunchjesse/AutoMin). The statamic version wouldn't be possible without Jesse's fantastic work, and it is being published with his approval.*
   
 *The main changes from the ExpressionEngine version is that the settings are moved to a yaml file. Also, HTML compression is not possible, logging is disabled and the way tag parameters worked had to be changed.*
 
@@ -36,7 +36,7 @@ Changelog
  - Initial Release
 
 
-Installation (Statamix 1.4.x)
+Installation (Statamic 1.4.x)
 ---
 1. Download and extract the contents of the zip. Copy the _add-ons/automin folder to your Statamic add-ons folder, and _config/automin.yaml to your config folder. 
 2. Create the AutoMin cache directory somewhere below your document root, preferably in your theme folder. Make sure it is writable by Apache (most of the time this means giving the folder 777 permissions).
@@ -117,7 +117,7 @@ Make sure your cache directory is set in the module's settings and that the dire
 
 If AutoMin breaks your CSS or JS code, make sure that your code contains no syntax errors. In your JS, you need to make sure that you always terminate JS statements with a semi-colon. Try running your source code through the relevant lint program for a validity check.
 
-Make sure that your CSS images are web-root relative. Use URLs like: `url('/css/img/myimage.jpg')` instead of `url('img/myimage.jpg')`
+Make sure that your CSS urls are web-root relative. Use URLs like: `url('/css/img/myimage.jpg')` instead of `url('img/myimage.jpg')`
 
 
 "Save some CPU cycles and precompile it instead!"
